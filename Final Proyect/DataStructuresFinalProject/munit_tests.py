@@ -1,6 +1,7 @@
 from DataStructures import Array, Doubly_Linked_List, Singly_Linked_List, Queue, Priority_Queue, Stacks, FactorialRecursion,FactorialMemoization, 
-FibonacciRecursion,FibonacciMemoization
+FibonacciRecursion,FibonacciMemoization,MergeSort,QuickSort
 
+from MergeSort import merge_sort
 from FactorialRecursion import factorial
 from FactorialMemoization import factorial
 from FibonacciRecursion import factorial
@@ -10,6 +11,15 @@ import unittest
 import hypothesis.strategies as st
 from hypothesis import given
 import math
+
+
+class TestSort(unittest.TestCase):
+    """
+    Check that merge sort sorts in ascending order
+    """
+    @given(st.lists(st.integers(min_value=1, max_value=12), min_size=4))
+    def test_merge_sort(self,array):
+        self.assertEqual(merge_sort(array), sorted(array))
 
 
 class TestFactorial(unittest.TestCase):  
