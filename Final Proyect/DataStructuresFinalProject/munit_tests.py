@@ -3,6 +3,8 @@ FibonacciRecursion,FibonacciMemoization
 
 from FactorialRecursion import factorial
 from FactorialMemoization import factorial
+from FibonacciRecursion import factorial
+from FibonacciMemoization import factorial
 
 import unittest
 import hypothesis.strategies as st
