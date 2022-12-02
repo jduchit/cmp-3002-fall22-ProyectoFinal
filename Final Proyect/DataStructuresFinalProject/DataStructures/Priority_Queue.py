@@ -38,15 +38,3 @@ class PriorityQueue(object):
         x = self.queue[self.l-1]
         self.l -= 1
         return x[0]
-    
-A = [10, 0]
-B = [7, 1]
-C = [9, 2]
-
-ejemplo = PriorityQueue(3)
-
-ejemplo.enqueue(A)
-ejemplo.enqueue(B)
-ejemplo.enqueue(C)
-
-print(ejemplo.dequeue())
