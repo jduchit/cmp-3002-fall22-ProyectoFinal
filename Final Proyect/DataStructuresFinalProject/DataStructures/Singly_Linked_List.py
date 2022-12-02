@@ -126,4 +126,8 @@ class Singly_linked_list:
                 prev = node
                 node = next_node
 
+<<<<<<< HEAD
             lista.head_node = prev
+=======
+            lista.head_node = prev
+>>>>>>> 25b9e4e538e7558c0a4826726ac897084cda8537
