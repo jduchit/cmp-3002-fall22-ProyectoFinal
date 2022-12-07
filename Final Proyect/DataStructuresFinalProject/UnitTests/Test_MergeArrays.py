@@ -32,7 +32,12 @@ class TestMergeSortedArrays(unittest.TestCase):
 
     def test_large_ll(self):   
         self.assertEqual(self.merge_arrays(self.arr1_large, self.arr2_large), self.totest_arr)
-    
+
+def main(out = sys.stderr, verbosity = 2):
+    loader = unittest.TestLoader()
+  
+    suite = loader.loadTestsFromModule(sys.modules[__name__])
+    unittest.TextTestRunner(out, verbosity = verbosity).run(suite)    
 
 if __name__ == "__main__":
     unittest.main()

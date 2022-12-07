@@ -49,27 +49,14 @@ class Test_Reverse_Linked_List(unittest.TestCase):
         LL2.reverse_list()
         self.assertEqual(LL2.head_node, None)
         self.assertEqual(LL2_rev.head_node, None)
-        
-        
+
+
+def main(out = sys.stderr, verbosity = 2):
+    loader = unittest.TestLoader()
+  
+    suite = loader.loadTestsFromModule(sys.modules[__name__])
+    unittest.TextTestRunner(out, verbosity = verbosity).run(suite)
+  
 if __name__ == '__main__':
     unittest.main()
     
-    
-    
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-

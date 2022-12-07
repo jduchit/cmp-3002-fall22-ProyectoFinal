@@ -47,6 +47,12 @@ class Test_Merge_Sorted_Linked_Lists(unittest.TestCase):
         # Revisa funcionamiento para linked list de 1 solo nodo
         merged_LL = merge_linked_lists(LL2, LL2)
         self.assertEqual(merged_LL, LL2)
-        
+
+def main(out = sys.stderr, verbosity = 2):
+    loader = unittest.TestLoader()
+  
+    suite = loader.loadTestsFromModule(sys.modules[__name__])
+    unittest.TextTestRunner(out, verbosity = verbosity).run(suite)
+
 if __name__ == '__main__':
     unittest.main()

@@ -45,6 +45,12 @@ class TestFactorial(unittest.TestCase):
     def test_n_greater_than_0(self,n):
         result = int(factorial(n) / factorial(n - 1))
         self.assertEqual(n, result)
+
+def main(out = sys.stderr, verbosity = 2):
+    loader = unittest.TestLoader()
+  
+    suite = loader.loadTestsFromModule(sys.modules[__name__])
+    unittest.TextTestRunner(out, verbosity = verbosity).run(suite)
         
 if __name__ == '__main__':
     unittest.main()

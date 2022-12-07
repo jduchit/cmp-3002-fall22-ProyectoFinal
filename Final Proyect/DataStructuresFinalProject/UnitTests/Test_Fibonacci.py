@@ -52,5 +52,11 @@ class TestFibonacci(unittest.TestCase):
         result = int(((((1 + math.sqrt(5)) / 2) ** (n))-(((1 - math.sqrt(5)) / 2) ** (n)))/(math.sqrt(5)))
         self.assertEqual(fibonacci(n), result)
 
+def main(out = sys.stderr, verbosity = 2):
+    loader = unittest.TestLoader()
+  
+    suite = loader.loadTestsFromModule(sys.modules[__name__])
+    unittest.TextTestRunner(out, verbosity = verbosity).run(suite)
+
 if __name__ == '__main__':
     unittest.main()
